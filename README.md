@@ -52,3 +52,17 @@ It is recommended to create a virtual environment before installing dependencies
 python -m venv .venv
 source .venv/bin/activate    # Windows: .venv\Scripts\activate
 pip install -r requirements/requirements.txt
+```
+
+## Citation
+
+If you use this repository or code derived from it in your research, please cite this repository.
+
+```bibtex
+@misc{Klug2026HybridQMLOptBenchmark,
+  author       = {Klug, Stefan and Moll, Maximilian},
+  title        = {Hybrid QML Optimization Benchmark},
+  year         = {2026},
+  howpublished = {\url{https://github.com/sklug842/hybrid-qml-optimization-benchmark}},
+  note         = {GitHub repository}
+}
