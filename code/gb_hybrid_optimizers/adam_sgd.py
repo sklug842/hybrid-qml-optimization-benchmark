@@ -10,7 +10,7 @@ tf.keras.backend.set_floatx("float64")
 
 class Adam_SGD(AbstractOptimizer_GB):
     """
-    Gradient-based training of the hybrid quantum–classical model using Adam or SGD.
+    Gradient-based training of the hybrid quantum-classical model using Adam or SGD.
 
     This optimizer performs standard mini-batch gradient-based training of the
     underlying model provided by ``wrapper``, using either Adaptive Moment

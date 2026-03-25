@@ -11,7 +11,7 @@ class MyQuantumLayer(tf.keras.layers.Layer):
 
     This layer embeds a PennyLane ``qml.qnn.KerasLayer`` (stored in
     ``self.qlayer_layer_PS``) and exposes it as a standard Keras layer that
-    can be used inside hybrid quantum–classical models. Forward evaluation is
+    can be used inside hybrid quantum-classical models. Forward evaluation is
     delegated to the underlying ``KerasLayer``, while the backward pass is
     overridden via ``@tf.custom_gradient`` in :meth:`my_caller`, where
     gradients are computed using the parameter-shift rule.

@@ -163,7 +163,7 @@ class GLS_Adam_SGD(AbstractOptimizer_GB):
     # Perform one offspring mutation via a single mini-batch gradient step (Adam or SGD)
     def mutateSubGD(self, individual):
         """
-        Perform a single local gradient–descent-based mutation of an individual.
+        Perform a single local gradient-descent-based mutation of an individual.
 
         This method implements the *sub-gradient descent mutation* used inside
         the GLS/Ding-style procedure. It produces one offspring by:

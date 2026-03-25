@@ -11,7 +11,7 @@ class PSO_BGB(AbstractOptimizer_GF):
     """
     Particle Swarm Optimization with optional Biogeography-based recombination (PSO / PSO BGB).
 
-    This class implements a particle-swarm–based gradient-free optimizer for
+    This class implements a particle-swarm-based gradient-free optimizer for
     variational quantum circuits, using the interface provided by ``wrapper``.
     Depending on the flag ``flag_bgb``, the algorithm behaves either as:
 
@@ -61,8 +61,8 @@ class PSO_BGB(AbstractOptimizer_GF):
 
          In PSO BGB mode, ``personal_best_new`` is produced by
          :meth:`get_personal_best_new`, which implements a migration-like
-         recombination mechanism: genes of each particle’s personal-best are
-         probabilistically replaced by genes from other particles’ personal-bests
+         recombination mechanism: genes of each particle's personal-best are
+         probabilistically replaced by genes from other particles' personal-bests
          according to rank-based migration rates.
 
       3. **Position update and clipping**:
@@ -75,7 +75,7 @@ class PSO_BGB(AbstractOptimizer_GF):
          it can be added using ``np.clip`` with ``x_min`` and ``x_max``.
 
       4. **Evaluation and best updates (training set)**:
-         Each particle’s fitness (training loss) is computed as
+         Each particle's fitness (training loss) is computed as
          ::
              fitness_X = wrapper.evaluate_single_final(
                  X_data=wrapper.X_train,

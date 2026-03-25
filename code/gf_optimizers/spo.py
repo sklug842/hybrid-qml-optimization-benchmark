@@ -34,14 +34,14 @@ class SPO(AbstractOptimizer_GF):
            * A **root offspring** (local search) is generated as:
              ::
                  population_root = population
-                     + d_root * U(-1, 1)^(pop_size × ind_size)
+                     + d_root * U(-1, 1)^(pop_size x ind_size)
 
              where ``d_root`` controls the maximum local step size.
 
            * A **runner offspring** (global search) is generated as:
              ::
                  population_runner = population
-                     + d_runner * U(-1, 1)^(pop_size × ind_size)
+                     + d_runner * U(-1, 1)^(pop_size x ind_size)
 
              where ``d_runner`` controls the maximum global step size and allows
              long-range moves to escape local minima.

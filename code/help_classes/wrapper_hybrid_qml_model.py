@@ -14,7 +14,7 @@ from   help_classes.myquantumlayer   import MyQuantumLayer
 
 class Wrapper_Hybrid_QML_Model(AbstractWrapper):
     """
-    Wrapper for a hybrid quantum–classical binary classification model.
+    Wrapper for a hybrid quantum-classical binary classification model.
 
     This wrapper encapsulates:
     
@@ -31,7 +31,7 @@ class Wrapper_Hybrid_QML_Model(AbstractWrapper):
       path for CPU execution and a GPU path when available.
 
     The resulting model is a fully differentiable hybrid QML model that can
-    also be driven by gradient-free optimizers through the individual–weight
+    also be driven by gradient-free optimizers through the individual-weight
     mapping methods.
 
     Parameters
@@ -185,7 +185,7 @@ class Wrapper_Hybrid_QML_Model(AbstractWrapper):
 
     def get_model(self):
         """
-        Construct the full hybrid quantum–classical Keras model.
+        Construct the full hybrid quantum-classical Keras model.
 
         The model architecture is:
 
@@ -568,7 +568,7 @@ class Wrapper_Hybrid_QML_Model(AbstractWrapper):
 
     def bce(self, x, y, eps=10 ** -15):
         """
-        Compute binary cross-entropy for a single prediction–label pair.
+        Compute binary cross-entropy for a single prediction-label pair.
 
         Numerically safe clipping is applied to the prediction ``x`` using
         ``eps`` to avoid ``log(0)``.

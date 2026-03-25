@@ -40,9 +40,9 @@ class GWO(AbstractOptimizer_GF):
       2. **Leadership hierarchy**:
          Wolves are sorted by fitness. The three best individuals define
          the leaders:
-           * ``pos_alpha`` – best solution found so far,
-           * ``pos_beta``  – second best,
-           * ``pos_delta`` – third best.
+           * ``pos_alpha`` - best solution found so far,
+           * ``pos_beta``  - second best,
+           * ``pos_delta`` - third best.
 
       3. **Coefficient update**:
          A linearly decreasing coefficient
