@@ -20,6 +20,7 @@ from gf_optimizers.ga_tourn                import GA_Tourn
 from gf_optimizers.bb_bc                   import BB_BC
 from gf_optimizers.ga_elite                import GA_Elite
 from gf_optimizers.cem                     import CEM
+from gf_optimizers.cobyla                  import COBYLA
 from gf_optimizers.gwo                     import GWO
 from gf_optimizers.aro                     import ARO
 from gf_optimizers.nes                     import NES
@@ -80,6 +81,7 @@ tf.keras.backend.set_floatx("float64")
 # "ARO"
 # "BB-BC"
 # "CEM"
+# "COBYLA"
 # "GA-Elite"
 # "GA-Tourn"
 # "GWO"
@@ -130,6 +132,9 @@ elif algorithm == "BB-BC":
 elif algorithm == "CEM":
     n_trials = 5**4*3
 
+elif algorithm == "COBYLA":
+    n_trials = 5
+
 elif algorithm == "GA-Elite":
     n_trials = 5**5
 
@@ -150,6 +155,11 @@ elif algorithm == "PSO-BGB":
 
 elif algorithm == "SPO":
     n_trials = 5**5
+
+
+# set grid for rhobeg
+if algorithm == "COBYLA":
+    cobyla_rhobeg_grid = np.arange(0.1*np.pi, 0.55*np.pi, 0.1*np.pi)
 
 
 def objective(trial):
@@ -185,6 +195,11 @@ def objective(trial):
 
         if best_size > pop_size:
             raise optuna.exceptions.TrialPruned()
+
+
+    elif algorithm == "COBYLA":
+        
+        rhobeg             = trial.suggest_categorical("rhobeg", cobyla_rhobeg_grid)
 
 
     elif algorithm == "GA-Elite":
@@ -308,6 +323,14 @@ def objective(trial):
                                      best_size         = best_size,
                                      beta              = beta,
                                      x_min_max         = x_min_max).run()
+
+        
+        elif algorithm == "COBYLA":
+
+            accuracies[:, run] = COBYLA(wrapper           = myWrapper,
+                                        n_evals_per_epoch = n_evals_per_epoch,
+                                        n_epochs          = n_epochs,
+                                        rhobeg            = rhobeg).run()
 
 
         elif algorithm == "GA-Elite":
