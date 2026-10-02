@@ -1,4 +1,47 @@
+cff-version: 1.2.0
+message: >-
+  If you use this software, please cite it using the
+  metadata and preferred citation below.
+title: Hybrid QML Optimization Benchmark
+type: software
+authors:
+  - family-names: Klug
+    given-names: Stefan
+    orcid: "https://orcid.org/0009-0008-5806-0790"
+  - family-names: Moll
+    given-names: Maximilian
+repository-code: "https://github.com/sklug842/hybrid-qml-optimization-benchmark"
+version: "1.0.0"
+date-released: 2026-09-27
+abstract: >-
+  Benchmarking gradient-based, gradient-free, and hybrid optimization
+  methods for hybrid quantum machine learning under matched
+  quantum-evaluation budgets.
+keywords:
+  - quantum machine learning
+  - optimization benchmark
+  - variational quantum circuits
+preferred-citation:
+  type: article
+  title: >-
+    Gradient-based versus gradient-free optimization in hybrid quantum
+    machine learning: a systematic benchmark
+  authors:
+    - family-names: Klug
+      given-names: Stefan
+      orcid: "https://orcid.org/0009-0008-5806-0790"
+    - family-names: Moll
+      given-names: Maximilian
+  journal: "Machine Learning: Science and Technology"
+  volume: "7"
+  issue: "5"
+  pages: "050503"
+  year: 2026
+  doi: "10.1088/2632-2153/aea3a0"
+
 # Hybrid QML Optimization Benchmark
+
+**Paper (open access):** *Machine Learning: Science and Technology* 7, 050503 (2026) — [doi.org/10.1088/2632-2153/aea3a0](https://doi.org/10.1088/2632-2153/aea3a0)
 
 Code accompanying the manuscript:
 
@@ -56,13 +99,31 @@ pip install -r requirements/requirements.txt
 
 ## Citation
 
-If you use this repository or code derived from it in your research, please cite this repository.
+If you use this repository or results derived from it in your research, please cite the paper:
 
 ```bibtex
-@misc{Klug2026HybridQMLOptBenchmark,
+@article{Klug2026HybridQMLOptBenchmark,
+  author  = {Klug, Stefan and Moll, Maximilian},
+  title   = {Gradient-based versus gradient-free optimization in hybrid quantum
+             machine learning: a systematic benchmark},
+  journal = {Machine Learning: Science and Technology},
+  volume  = {7},
+  number  = {5},
+  pages   = {050503},
+  year    = {2026},
+  doi     = {10.1088/2632-2153/aea3a0},
+  url     = {https://doi.org/10.1088/2632-2153/aea3a0}
+}
+```
+
+If you also want to cite the code itself, cite this repository (or its Zenodo DOI, once minted):
+
+```bibtex
+@misc{Klug2026HybridQMLOptCode,
   author       = {Klug, Stefan and Moll, Maximilian},
   title        = {Hybrid QML Optimization Benchmark},
   year         = {2026},
   howpublished = {\url{https://github.com/sklug842/hybrid-qml-optimization-benchmark}},
   note         = {GitHub repository}
 }
+```
